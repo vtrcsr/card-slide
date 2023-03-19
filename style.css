@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Pokemon';
+  src: url('fonts/PokemonGb-RAeo.ttf') format('opentype');
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Pokemon';
+  background: url("https://wallpapercave.com/wp/wp8797760.jpg") center/cover;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card{
+  background-color: #f8f8f8;
+  box-shadow: 1px 2px 18px #21212190;
+  border-radius: 15px;
+  width: 500px;
+}
+
+.img{
+  background: url("https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center/cover;
+  height: 400px;
+  width: 100%;
+}
+
+h1{
+  color: rgb(18, 18, 118);
+}
+
+.head{
+  padding: 20px;
+}
+
+.head p{
+  padding-top: 10px;
+  color: rgb(126, 126, 196);
+}
+
+.bottom{
+  padding: 20px;
+}
+
+.bottomtext{
+  color: rgb(65, 96, 220);
+  padding-bottom: 20px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.btn{
+  background: none;
+  border: none;
+  color: rgb(12, 96, 232);
+  padding-top: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: 'Pokemon';
+  font-size: 12px;
+}
+
+.slider{
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.slides{
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: 1s;
+}
+
+.slide img{
+  width: 800px;
+}
+
+.manual-nav{
+  position: absolute;
+  width: 500px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.manualbtn{
+  border: 2px solid whitesmoke;
+  padding: 3px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.manualbtn:not(:last-child){
+  margin-right: 20px;
+}
+
+.manualbtn:hover{
+  background-color: whitesmoke;
+  transition: 0.4s ease-in-out;
+}
+
+#radio1:checked ~ .one{
+  margin-left: 0;
+}
+#radio2:checked ~ .one{
+  margin-left: -25%;
+}
+#radio3:checked ~ .one{
+  margin-left: -50%;
+}
+#radio4:checked ~ .one{
+  margin-left: -75%;
+}
+
+.nav-auto div{
+  border: 2px solid rgb(0, 132, 255);
+  border-radius: 15px;
+  padding: 7.5px;
+  cursor: pointer;
+}
+
+.nav-auto{
+  position: absolute;
+  width: 502px;
+  margin-top: 455px;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.nav-auto div:not(:last-child){
+  margin-right: 10px;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+  background-color: whitesmoke;
+  visibility: visible;
+}
+#radio2:checked ~ .nav-auto .auto-btn2{
+  background-color: whitesmoke;
+  visibility: visible;
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+  background-color: whitesmoke;
+  visibility: visible;
+}
+#radio4:checked ~ .nav-auto .auto-btn4{
+  background-color: whitesmoke;
+  visibility: visible;
+}
+
